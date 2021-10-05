@@ -2,18 +2,18 @@
  
 int KadaneSum(int arr[], int size)
 {
-    int max_so_far = -2147483648, max_ending_here = 0;
+    int max_yet = -2147483648, max_end = 0;
  
     for (int i = 0; i < size; i++)
     {
-        max_ending_here = max_ending_here + arr[i];
-        if (max_so_far < max_ending_here)
-            max_so_far = max_ending_here;
+        max_end = max_end + arr[i];
+        if (max_yet < max_end)
+            max_yet = max_end;
  
-        if (max_ending_here < 0)
-            max_ending_here = 0;
+        if (max_end < 0)
+            max_end = 0;
     }
-    return max_so_far;
+    return max_yet;
 }
  
 int main()
